@@ -73,9 +73,398 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-我的笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-重要端口及服务速查" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/07/27/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0/" class="article-date">
+    <a href="/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/" class="article-date">
+  <time class="dt-published" datetime="2023-07-27T06:11:31.204Z" itemprop="datePublished">2023-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/">重要端口及服务</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="重要端口及服务"><a href="#重要端口及服务" class="headerlink" title="重要端口及服务"></a>重要端口及服务</h1><table>
+<thead>
+<tr>
+<th>port</th>
+<th>service</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>21</td>
+<td>FTP</td>
+<td>FTP控制端口，检查匿名登录、弱口令</td>
+</tr>
+<tr>
+<td>22</td>
+<td>SSH</td>
+<td>SSH远程登录协议，检查弱口令</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Telnet</td>
+<td>Telnet终端仿真协议</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS服务</td>
+<td></td>
+</tr>
+<tr>
+<td>80</td>
+<td>Web</td>
+<td>检查常见Web漏洞及管理后台</td>
+</tr>
+<tr>
+<td>111</td>
+<td>NFS</td>
+<td>网络文件系统</td>
+</tr>
+<tr>
+<td>389</td>
+<td>LDAP</td>
+<td>轻型目录访问协议，检查是否存在匿名访问</td>
+</tr>
+<tr>
+<td>443</td>
+<td>OpenSSL</td>
+<td>检查心脏滴血及Web漏洞</td>
+</tr>
+<tr>
+<td>445</td>
+<td>SMB</td>
+<td>检查是否存在MS17-010、MS08-067漏洞</td>
+</tr>
+<tr>
+<td>512</td>
+<td>Rexec</td>
+<td>检查远程shell命令及暴力破解</td>
+</tr>
+<tr>
+<td>873</td>
+<td>Rsync</td>
+<td>检查匿名登录、弱口令</td>
+</tr>
+<tr>
+<td>1433</td>
+<td>SQL Server</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>1521</td>
+<td>Oracle</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>2049</td>
+<td>NFS</td>
+<td>NFS未授权访问</td>
+</tr>
+<tr>
+<td>2181</td>
+<td>Zookeeper</td>
+<td>分布式协调系统</td>
+</tr>
+<tr>
+<td>2375</td>
+<td>Docker Remote</td>
+<td>API未授权访问</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>MySQL</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>3389</td>
+<td>RDP</td>
+<td>远程桌面</td>
+</tr>
+<tr>
+<td>4848</td>
+<td>GlassFish</td>
+<td>未授权访问</td>
+</tr>
+<tr>
+<td>5432</td>
+<td>PostgreSQL</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>5601</td>
+<td>Kibana</td>
+<td>开源分析及可视化平台</td>
+</tr>
+<tr>
+<td>5672</td>
+<td>RabbitMQ</td>
+<td>开源消息队列服务软件</td>
+</tr>
+<tr>
+<td>5900</td>
+<td>VNC</td>
+<td>远程桌面控制软件，检查弱口令</td>
+</tr>
+<tr>
+<td>5984</td>
+<td>CouchDB</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>Redis</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>7001</td>
+<td>Weblogic</td>
+<td>Weblogic Console默认端口</td>
+</tr>
+<tr>
+<td>8000-9090</td>
+<td>Web</td>
+<td>常见Web端口，运维一般将管理后台开在这些非80端口上</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>Jenkins</td>
+<td></td>
+</tr>
+<tr>
+<td>8080</td>
+<td>Kubernetes Api Server</td>
+<td></td>
+</tr>
+<tr>
+<td>8081</td>
+<td>Apache-Flink</td>
+<td></td>
+</tr>
+<tr>
+<td>8089</td>
+<td>Druid</td>
+<td></td>
+</tr>
+<tr>
+<td>8090</td>
+<td>Confluence</td>
+<td></td>
+</tr>
+<tr>
+<td>8095</td>
+<td>Atlassian Crowd</td>
+<td></td>
+</tr>
+<tr>
+<td>8161</td>
+<td>Active MQ</td>
+<td></td>
+</tr>
+<tr>
+<td>8888</td>
+<td>Jupyter Notebook</td>
+<td></td>
+</tr>
+<tr>
+<td>8983</td>
+<td>Solr</td>
+<td></td>
+</tr>
+<tr>
+<td>9000</td>
+<td>Fast-CGI</td>
+<td>对外访问可直接Get shell</td>
+</tr>
+<tr>
+<td>9060</td>
+<td>Websephere</td>
+<td>管理端口</td>
+</tr>
+<tr>
+<td>9092</td>
+<td>Kafka</td>
+<td>开源流处理平台</td>
+</tr>
+<tr>
+<td>9200</td>
+<td>Elasticsearch(http)</td>
+<td>全文搜索引擎</td>
+</tr>
+<tr>
+<td>9300</td>
+<td>Elasticsearch(tcp)</td>
+<td>全文搜索引擎</td>
+</tr>
+<tr>
+<td>10000</td>
+<td>Virualmin&#x2F;Webmin</td>
+<td>服务器虚拟主机管理系统</td>
+</tr>
+<tr>
+<td>10051</td>
+<td>Zabbix</td>
+<td>监控系统</td>
+</tr>
+<tr>
+<td>11211</td>
+<td>Memcache</td>
+<td>分布式高速缓存系统，检查未授权访问</td>
+</tr>
+<tr>
+<td>20880</td>
+<td>Dubbo</td>
+<td>阿里巴巴开源分布式服务框架</td>
+</tr>
+<tr>
+<td>27017</td>
+<td>MongoDB</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>28017</td>
+<td>MongoDB</td>
+<td>数据库服务（统计页面）</td>
+</tr>
+<tr>
+<td>50030</td>
+<td>Hadoop Hive</td>
+<td></td>
+</tr>
+<tr>
+<td>50070</td>
+<td>Hadoop</td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/" data-id="clkkrf1xw0001uwn199z2b1kk" data-title="重要端口及服务" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Typora基本输入格式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/07/27/Typora%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2023-07-27T06:09:30.509Z" itemprop="datePublished">2023-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/07/27/Typora%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F/">Typora基本输入格式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p>Hello word</p>
+<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><hr>
+<hr>
+<blockquote>
+<p>1.1.1.1<br>1.1.1.2<br>1.1.1.3<br>1.1.1.4</p>
+</blockquote>
+<p>&#x3D;&#x3D;<strong>高亮</strong>&#x3D;&#x3D;<br><strong>.</strong>*</p>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5<ul>
+<li>5.1</li>
+<li>5.2</li>
+</ul>
+</li>
+</ul>
+<h4 id="1234"><a href="#1234" class="headerlink" title="1234"></a>1234</h4><h5 id="12345"><a href="#12345" class="headerlink" title="12345"></a>12345</h5><blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> 背单词</li>
+<li><input checked="" disabled="" type="checkbox"> 吃饭</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>1<br>2<br>3</p>
+<blockquote>
+<p>4<br>5</p>
+<blockquote>
+<p>6</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><ol>
+<li>123</li>
+<li>234<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span>(<span class="string">&quot;hello world&quot;</span>);</span><br></pre></td></tr></table></figure>
+123456<br>123456</li>
+</ol>
+<h1 id="程序2"><a href="#程序2" class="headerlink" title="程序2"></a>程序2</h1><ol>
+<li>123456</li>
+<li>6666</li>
+</ol>
+<p><a href="www.baidu.com">百度</a></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">1</th>
+<th align="center">2</th>
+<th align="right">3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">4</td>
+<td align="center">5</td>
+<td align="right">6</td>
+</tr>
+</tbody></table>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/07/27/Typora%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F/" data-id="clkkrkng00002uwn156vo0tua" data-title="Typora基本输入格式" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-信息收集" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/07/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" class="article-date">
   <time class="dt-published" datetime="2023-07-27T02:33:13.022Z" itemprop="datePublished">2023-07-27</time>
 </a>
     
@@ -87,7 +476,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/27/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0/">我的第一个笔记</a>
+      <a class="p-name article-title" href="/2023/07/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">信息收集</a>
     </h1>
   
 
@@ -105,7 +494,7 @@
 <p><a target="_blank" rel="noopener" href="https://cn.linkedin.com/">https://cn.linkedin.com</a></p>
 <p>登录_学信网 (chsi.com.cn)</p>
 <p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/clip_image006.png" alt="img"></p>
-<p><strong>DNS<strong><strong>（Domain Name System</strong></strong>域名系统）</strong></p>
+<p><strong>DNS（Domain Name System 域名系统）</strong></p>
 <p>DNS系统的作用</p>
 <p>正向解析：主机名查IP</p>
 <p>反向解析：IP查主机名</p>
@@ -116,11 +505,15 @@
 <p>UNIX TTL值255</p>
 <p>Linux TTL值64或255</p>
 <p>Linux&#x2F;Unix系统TTL值一般240~255 </p>
+<p><strong>dig作用</strong></p>
+<p>查询域名 dig baidu.com</p>
+<p><strong>ip查询</strong></p>
+<p>查询IP地址的运营商</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/27/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0/" data-id="clkkjiwfh0000pon14nxmejee" data-title="我的第一个笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/07/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" data-id="clkkrf1xp0000uwn195za6wpx" data-title="信息收集" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -252,7 +645,15 @@
       <ul>
         
           <li>
-            <a href="/2023/07/27/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0/">我的第一个笔记</a>
+            <a href="/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/">重要端口及服务</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/27/Typora%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F/">Typora基本输入格式</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">信息收集</a>
           </li>
         
           <li>
