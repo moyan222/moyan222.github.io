@@ -63,7 +63,7 @@
 	<div class="widget-wrap">
 		<h3 class="widget-title fa fa-tags">标签</h3>
 		<div class="widget tags">
-		<a class="tag-span-link" href="/tags/%E4%BF%A1%E6%81%AF/" rel="tag">信息<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="tag">搭建博客<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试<span class="tag-span-count">1</span></a>
+		<a class="tag-span-link" href="/tags/%E4%BF%A1%E6%81%AF/" rel="tag">信息<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E5%88%86%E4%BA%AB%E7%AC%94%E8%AE%B0/" rel="tag">分享笔记<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="tag">搭建博客<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试<span class="tag-span-count">1</span></a>
 		</div>
 	</div>
 
@@ -72,7 +72,7 @@
 	<div class="widget-wrap">
 		<h3 class="widget-title fa fa-archive">归档</h3>
 		<div class="widget">
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">6</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">8</span></li></ul>
 		</div>
 	</div>
 
@@ -122,50 +122,36 @@
 <p>6.配置SSH</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CD ~/.ssh #检查本机已存在的SSH密钥</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>如果提示：No such file or directory 说明你是第一次使用git。</li>
-<li>接下来输入：</li>
-</ul>
+<p>● 如果提示：No such file or directory 说明你是第一次使用git。<br>● 接下来输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot; (注意C后面与邮件地址有个空格)</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
-<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/SSH.png" alt="SSH"></p>
-</li>
-<li><p>key填写C:\Users\主机名\ .ssh\id_rsa.pub中的内容 (注意\跟.ssh之间没有空格)</p>
-<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230727154939560.png" alt="image-20230727154939560"></p>
-</li>
-<li><p>开始测试SSH连接，看看是否成功</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com #注意邮箱地址不用改</span><br></pre></td></tr></table></figure></li>
-<li><p>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</p>
+<p>● 然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
+<p>  <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/SSH.png" alt="SSH"></p>
+<p>● key填写C:\Users\主机名\ .ssh\id_rsa.pub中的内容 (注意\跟.ssh之间没有空格)</p>
+<p>  <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230727154939560.png" alt="image-20230727154939560"></p>
+<p>● 开始测试SSH连接，看看是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com #注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
+<p>● 如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在文件夹blog目录下打开cmd(以管理员身份) 并输入命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git -save</span><br></pre></td></tr></table></figure></li>
-</ul>
+
+<p>● 在文件夹blog目录下打开cmd(以管理员身份) 并输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git -save</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230727155455143.png" alt="image-20230727155455143"></p>
-<ul>
-<li><p>在上一个 Git Bash Here还需要继续配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config –global user.name &quot;moyan222&quot;// 你的github用户名，非昵称</span><br><span class="line">git config –global user.email &quot;2228405780@qq.com&quot;// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure></li>
-</ul>
+<p>● 在上一个 Git Bash Here还需要继续配置</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config –global user.name &quot;moyan222&quot;// 你的github用户名，非昵称</span><br><span class="line">git config –global user.email &quot;2228405780@qq.com&quot;// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+
 <p>6.准备上传代码</p>
-<ul>
-<li>在github上新建一个 存储库，命名为 github的用户名.github.io</li>
-<li>编辑_config.yml文件（打开方式用记事本），划到最后改成：</li>
-</ul>
+<p>● 在github上新建一个 存储库，命名为 github的用户名.github.io<br>● 编辑_config.yml文件（打开方式用记事本），划到最后改成：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:moyan222/moyan222.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230727160645800.png" alt="image-20230727160645800"></p>
-<ul>
-<li>注意保持格式（最好复制粘贴），缩进不对会导致上传不成功</li>
-<li>最后上传</li>
-</ul>
+<p>● 注意保持格式（最好复制粘贴），缩进不对会导致上传不成功</p>
+<p>● 最后上传</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br><span class="line">每次上传成功之后，需要等待1-3分钟，用来刷新页面</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230727161216288.png" alt="image-20230727161216288"></p>
-<ul>
-<li>在已经创建好的数据库设置中</li>
-</ul>
+<p>● 在已经创建好的数据库设置中</p>
 <p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230727161536220.png" alt="image-20230727161536220"></p>
 <p>7.hexo命令介绍</p>
 <blockquote>
