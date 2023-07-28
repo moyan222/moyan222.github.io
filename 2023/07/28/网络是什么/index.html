@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>OSPF分享博客 [ Hexo ]</title>
+  <title>网络是什么 [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -83,7 +83,7 @@
     
 <article id="post">
 	<div class="post-title">
-  <h1>OSPF分享博客</h1>
+  <h1>网络是什么</h1>
   	</div>
   <div class="page-meta">
   	<span class="fa-wrap">
@@ -93,7 +93,7 @@
   	<span class="fa-wrap">
   		
   		<i class="fa fa-tags"></i>
-  		<span class="tags-meta">分享笔记</span>
+  		<span class="tags-meta">数据通信网络基础</span>
   		
   	</span>
   	<span class="fa-wrap">
@@ -101,26 +101,34 @@
   	</span>
   </div>
   <div class="post-content">
-  <h1 id="OSPF路由协议概念"><a href="#OSPF路由协议概念" class="headerlink" title="OSPF路由协议概念"></a>OSPF路由协议概念</h1><p>OSPF协议是一种链路状态协议。每个路由器负责发现、维护与邻居的关系，并将已知的邻居列表和链路费用LSU(Link State Update)报文描述，通过可靠的泛洪与自治系统AS(Autonomous System)内的其他路由器周期性交互，学习到整个自治系统的网络拓扑结构;并通过自治系统边界的路由器注入其他自治系统的路由信息，从而得到整个Internet的路由信息。每隔一个特定时间或当链路状态发生变化时，重新生成LSA链路状态通告，路由器通过泛洪机制将新链路状态通告出去，以便实现路由的实时更新。</p>
-<h1 id="OSPF的三张表"><a href="#OSPF的三张表" class="headerlink" title="OSPF的三张表"></a>OSPF的三张表</h1><p>邻居列表、链路状态数据库（拓扑表）、路由表</p>
-<h1 id="OSPF的区域分类"><a href="#OSPF的区域分类" class="headerlink" title="OSPF的区域分类"></a>OSPF的区域分类</h1><p> ■ 骨干区域Area 0<br> 负责区域间路由信息传播（路由信息：LSA [链路状态通告] ）<br> ■ 非骨干区域</p>
-<h2 id="OSPF的路由器分类"><a href="#OSPF的路由器分类" class="headerlink" title="OSPF的路由器分类"></a>OSPF的路由器分类</h2><p> ● 区域边界路由器、<br> ● 内部路由器、<br> ● 自治系统边界路由器、<br> ● 骨干路由器。</p>
-<h2 id="OSPF的网络类型"><a href="#OSPF的网络类型" class="headerlink" title="OSPF的网络类型"></a>OSPF的网络类型</h2><p>● 点到点网络（point-to-point）</p>
-<p>● 广播多路访问网络（Broadcast Multi Access，BMA）</p>
-<p>● 非广播多路访问网络（None Broadcast Multi Access，NBMA）</p>
-<p>● 点到多点网络（point-to-MultiPoint）</p>
-<h1 id="OSPF路由协议特点"><a href="#OSPF路由协议特点" class="headerlink" title="OSPF路由协议特点"></a>OSPF路由协议特点</h1><p>·    可适应大规模网络</p>
-<p>·    路由变化收敛速度快</p>
-<p>·    无路由环</p>
-<p>·    支持变长子网掩码VLSM</p>
-<p>·    支持区域划分</p>
-<p>·    支持以组播地址发送协议报</p>
-<p>由于OSPF具有以上优势，使得OSPF作为优秀的内部网关协议被快速接受并广泛使用</p>
-<h1 id="OSPF路由协议实现过程"><a href="#OSPF路由协议实现过程" class="headerlink" title="OSPF路由协议实现过程"></a>OSPF路由协议实现过程</h1><p>   1、初始化形成端口初始信息</p>
-<p>在路由器初始化或网络结构发生变化(如链路发生变化，路由器新增或损坏)时，相关路由器会产生链路状态广播数据包，该数据包里包含路由器上所有相连链路，也就是所有端口的状态信息。</p>
-<p>   2、路由器间通过泛洪（Flooding）机制交换链路状态信息，各路由器一方面将其链路状态通知数据包传送给所有与其相邻的OSPF路由器，另一方面接收其相邻的OSPF路由器传来的链路状态通知数据包，根据其更新自己的数据库。</p>
-<p>   3、形成稳定的区域拓扑结构数据库，OSPF路由协议通过泛洪法逐渐收敛，形成该区域拓扑结构的数据库，这时所有的路由器均保留了该数据库的一个副本。</p>
-<p>   4、形成路由表，所有的路由器根据其区域拓扑结构数据库副本采用最短路径法计算形成各自的路由表。  </p>
+  <p><strong>1、什么是网络？什么是互联网？目前最大的互联网是什么网？</strong><br>a.网络是传输信息，接受共享的虚拟平台。<br>b.很多网络连接起来叫互联网<br>c.英特网</p>
+<p>计算机网络，按照地理位置可以划分为三类：局域网、城域网、广域网。</p>
+<p>|–局域网，LAN(Local Area Network)，在较小的地理区域内建立的计算机网络。</p>
+<p>例如实验室建一个网络，内部的电脑互联起来，就是一个局域网；<br>一家公司建一个网络，也是局域网，家里装个路由器，也是一个局域网。<br>在我们手机上，连接WIFI的那个功能，写的是“WLAN”，全称是“Wireless Local Area Networks”，就是“无线局域网”的意思。</p>
+<p>|–城域网，MAN(Metropolitan Area Network)，若干个局域网互相连接而成，适合于大都市的较大规模的计算机网络。</p>
+<p>|–广域网，WAN(Wide Area Network),涉及几个城市、一个国家、各个国家一个的计算机网络。</p>
+<p><strong>2、列举几种常见的网络拓扑，并说明企业组网通常采用什么样的网络拓扑？</strong></p>
+<ol>
+<li><p>总线型网络</p>
+</li>
+<li><p>星型网络</p>
+</li>
+<li><p>环形网络</p>
+</li>
+<li><p>树形网络</p>
+</li>
+<li><p>网状型网络</p>
+<p>绝大多数企业都使用星形拓扑结构的局域网</p>
+</li>
+</ol>
+<p><strong>3、列举几种常见的网络设备并说出它们的作用。</strong></p>
+<p><strong>1、中继器</strong><br>一种网络信号传输过程中放大信号的设备，它是网络物理层的一种介质连接设备，由于信号在网络传输介质中有衰减和噪声，使得有用的信号越来越弱，为了保持有用数据的完整性，并在一定范围内传送，要用中继器把接收到的信号放大以保持与原数据相同，使用中继器可以让信号传输更远。</p>
+<p><strong>2、集线器</strong><br>一种信号再生转发器。它可以把信号分散到多条线路上，集线器几口的数量确定下连的计算机数目，同时HUB也可进行堆叠扩展。</p>
+<p><strong>3、网关</strong><br>连接两个不同网络协议或不同体系结构计算机网络的设备。网关有两种：一种面向连接的网关；一种是无连接的网关。网关可实现不同网络间的转换，可在两个不同类型的网络系统间进行通信，把协议进行转换，将数据重新进行分组、包装和转换。</p>
+<p><strong>4、网桥</strong><br>网络节点设备。能将一个比较大的局域网分割成多个网段或者将多个局域网互联为一个逻辑局域网，网桥的功能是延长网络的跨度，同时提供智能化连接服务&gt;即：根据数据包终点地址处于哪一个网段来进行转发和过滤。</p>
+<p><strong>5、路由器</strong><br>连接局域网和关于的设备。在网络中起着数据转发和信息资源进出的枢纽作用，是网络的核心设备。当data从某个子网传输到另一个子网时，要通过路由器来完成，路由器根据传输费用、转接延时、网络拥塞或信源至终点间的距离来选择最佳路径。</p>
+<p><strong>6、交换机</strong><br>一种可以根据要传输的网络信息来构造自己的“转发表“做出转发决策的设备。交换机解决了局域网中网段划分之后网段中子网必须依赖路由器进行管理的局面，也解决传统路由器低俗、复杂、昂贵所造成的网络瓶颈问题。</p>
+<p><strong>7、调制解调器</strong><br>一种是电脑通过电话线同其他电脑通信的设备。因电脑采用数字信号，二电话系统使用模拟信号传输数据，想通过电话线路通信，必须实现数字信号与模拟信号的转换。 其功能受三个因素影响：速率、错误纠正、数据压缩；如其具备两大功能：一是调制和解调功能；二是硬件纠错、硬件压缩、通信协议功能均由硬件芯片来完成的，则效率功能更强。</p>
 
 	</div>
 </article>

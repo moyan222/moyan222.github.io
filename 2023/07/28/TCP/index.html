@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>OSPF分享博客 [ Hexo ]</title>
+  <title>TCP [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -83,7 +83,7 @@
     
 <article id="post">
 	<div class="post-title">
-  <h1>OSPF分享博客</h1>
+  <h1>TCP</h1>
   	</div>
   <div class="page-meta">
   	<span class="fa-wrap">
@@ -93,7 +93,7 @@
   	<span class="fa-wrap">
   		
   		<i class="fa fa-tags"></i>
-  		<span class="tags-meta">分享笔记</span>
+  		<span class="tags-meta">数据通信网络基础</span>
   		
   	</span>
   	<span class="fa-wrap">
@@ -101,26 +101,37 @@
   	</span>
   </div>
   <div class="post-content">
-  <h1 id="OSPF路由协议概念"><a href="#OSPF路由协议概念" class="headerlink" title="OSPF路由协议概念"></a>OSPF路由协议概念</h1><p>OSPF协议是一种链路状态协议。每个路由器负责发现、维护与邻居的关系，并将已知的邻居列表和链路费用LSU(Link State Update)报文描述，通过可靠的泛洪与自治系统AS(Autonomous System)内的其他路由器周期性交互，学习到整个自治系统的网络拓扑结构;并通过自治系统边界的路由器注入其他自治系统的路由信息，从而得到整个Internet的路由信息。每隔一个特定时间或当链路状态发生变化时，重新生成LSA链路状态通告，路由器通过泛洪机制将新链路状态通告出去，以便实现路由的实时更新。</p>
-<h1 id="OSPF的三张表"><a href="#OSPF的三张表" class="headerlink" title="OSPF的三张表"></a>OSPF的三张表</h1><p>邻居列表、链路状态数据库（拓扑表）、路由表</p>
-<h1 id="OSPF的区域分类"><a href="#OSPF的区域分类" class="headerlink" title="OSPF的区域分类"></a>OSPF的区域分类</h1><p> ■ 骨干区域Area 0<br> 负责区域间路由信息传播（路由信息：LSA [链路状态通告] ）<br> ■ 非骨干区域</p>
-<h2 id="OSPF的路由器分类"><a href="#OSPF的路由器分类" class="headerlink" title="OSPF的路由器分类"></a>OSPF的路由器分类</h2><p> ● 区域边界路由器、<br> ● 内部路由器、<br> ● 自治系统边界路由器、<br> ● 骨干路由器。</p>
-<h2 id="OSPF的网络类型"><a href="#OSPF的网络类型" class="headerlink" title="OSPF的网络类型"></a>OSPF的网络类型</h2><p>● 点到点网络（point-to-point）</p>
-<p>● 广播多路访问网络（Broadcast Multi Access，BMA）</p>
-<p>● 非广播多路访问网络（None Broadcast Multi Access，NBMA）</p>
-<p>● 点到多点网络（point-to-MultiPoint）</p>
-<h1 id="OSPF路由协议特点"><a href="#OSPF路由协议特点" class="headerlink" title="OSPF路由协议特点"></a>OSPF路由协议特点</h1><p>·    可适应大规模网络</p>
-<p>·    路由变化收敛速度快</p>
-<p>·    无路由环</p>
-<p>·    支持变长子网掩码VLSM</p>
-<p>·    支持区域划分</p>
-<p>·    支持以组播地址发送协议报</p>
-<p>由于OSPF具有以上优势，使得OSPF作为优秀的内部网关协议被快速接受并广泛使用</p>
-<h1 id="OSPF路由协议实现过程"><a href="#OSPF路由协议实现过程" class="headerlink" title="OSPF路由协议实现过程"></a>OSPF路由协议实现过程</h1><p>   1、初始化形成端口初始信息</p>
-<p>在路由器初始化或网络结构发生变化(如链路发生变化，路由器新增或损坏)时，相关路由器会产生链路状态广播数据包，该数据包里包含路由器上所有相连链路，也就是所有端口的状态信息。</p>
-<p>   2、路由器间通过泛洪（Flooding）机制交换链路状态信息，各路由器一方面将其链路状态通知数据包传送给所有与其相邻的OSPF路由器，另一方面接收其相邻的OSPF路由器传来的链路状态通知数据包，根据其更新自己的数据库。</p>
-<p>   3、形成稳定的区域拓扑结构数据库，OSPF路由协议通过泛洪法逐渐收敛，形成该区域拓扑结构的数据库，这时所有的路由器均保留了该数据库的一个副本。</p>
-<p>   4、形成路由表，所有的路由器根据其区域拓扑结构数据库副本采用最短路径法计算形成各自的路由表。  </p>
+  <p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164113208.png" alt="image-20230728164113208"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164127178.png" alt="image-20230728164127178"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164136383.png" alt="image-20230728164136383"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164144798.png" alt="image-20230728164144798"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164152529.png" alt="image-20230728164152529"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164207278.png" alt="image-20230728164207278"></p>
+<p><strong>CSMD&#x2F;CD 解决冲突</strong></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164232813.png" alt="image-20230728164232813"></p>
+<p>RDP远程桌面端口 3389</p>
+<p>Pop3 tcp 110</p>
+<p>Oracle 1521</p>
+<p>最大传输单元 MTU&#x3D;1500B</p>
+<p>​    真正传输的 1480B（首部长度20B&lt;字节&gt;）  </p>
+<p>存活时间TTL值 64 128 255 </p>
+<p>当TTL值为0时会丢弃数据包</p>
+<p>报文每经过一台三层设备TTL值减1</p>
+<p>任意地址 0.0.0.0</p>
+<p>环回地址127.0.0.1&#x2F;8 测试设备自身的软件系统</p>
+<p>本地链路地址 169.254.0.0&#x2F;24</p>
+<p>MAC地址 局域网地址 也叫硬件地址</p>
+<p>Dis this</p>
+<p>Dis cur int g0&#x2F;0&#x2F;0 查看接口g0&#x2F;0&#x2F;0的配置信息</p>
+<p>Return 直接退到用户视图模式</p>
+<p>Quit &#x2F;&#x2F;退出（退出当前模式，返回上一级）</p>
+<p>Ctrl+z 退出到用户视图模式</p>
+<p> dis ip int brief &#x2F;&#x2F;查看IP接口配置信息</p>
+<p>dis ip routing-table 查看路由信息表</p>
+<p>dis int g0&#x2F;0&#x2F;0 查看g0&#x2F;0&#x2F;0接口详细信息 可以查看MAC地址</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164304271.png" alt="image-20230728164304271"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164314208.png" alt="image-20230728164314208"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164322836.png" alt="image-20230728164322836"></p>
 
 	</div>
 </article>
