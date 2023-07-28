@@ -101,7 +101,7 @@
   	</span>
   </div>
   <div class="post-content">
-  <h1 id="OSPF路由协议概念"><a href="#OSPF路由协议概念" class="headerlink" title="OSPF路由协议概念"></a>OSPF路由协议概念</h1><p>OSPF协议是一种链路状态协议。每个路由器负责发现、维护与邻居的关系，并将已知的邻居列表和链路费用LSU(Link State Update)报文描述，通过可靠的泛洪与自治系统AS(Autonomous System)内的其他路由器周期性交互，学习到整个自治系统的网络拓扑结构;并通过自治系统边界的路由器注入其他AS的路由信息，从而得到整个Internet的路由信息。每隔一个特定时间或当链路状态发生变化时，重新生成LSA链路状态通告，路由器通过泛洪机制将新链路状态通告出去，以便实现路由的实时更新。</p>
+  <h1 id="OSPF路由协议概念"><a href="#OSPF路由协议概念" class="headerlink" title="OSPF路由协议概念"></a>OSPF路由协议概念</h1><p>OSPF协议是一种链路状态协议。每个路由器负责发现、维护与邻居的关系，并将已知的邻居列表和链路费用LSU(Link State Update)报文描述，通过可靠的泛洪与自治系统AS(Autonomous System)内的其他路由器周期性交互，学习到整个自治系统的网络拓扑结构;并通过自治系统边界的路由器注入其他自治系统的路由信息，从而得到整个Internet的路由信息。每隔一个特定时间或当链路状态发生变化时，重新生成LSA链路状态通告，路由器通过泛洪机制将新链路状态通告出去，以便实现路由的实时更新。</p>
 <h1 id="OSPF的三张表"><a href="#OSPF的三张表" class="headerlink" title="OSPF的三张表"></a>OSPF的三张表</h1><p>邻居列表、链路状态数据库（拓扑表）、路由表</p>
 <h1 id="OSPF的区域分类"><a href="#OSPF的区域分类" class="headerlink" title="OSPF的区域分类"></a>OSPF的区域分类</h1><p> ■ 骨干区域Area 0<br> 负责区域间路由信息传播（路由信息：LSA [链路状态通告] ）<br> ■ 非骨干区域</p>
 <h2 id="OSPF的路由器分类"><a href="#OSPF的路由器分类" class="headerlink" title="OSPF的路由器分类"></a>OSPF的路由器分类</h2><p> ● 区域边界路由器、<br> ● 内部路由器、<br> ● 自治系统边界路由器、<br> ● 骨干路由器。</p>
