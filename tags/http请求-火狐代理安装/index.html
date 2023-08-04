@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>OSI模型-数据转发过程 [ Hexo ]</title>
+  <title>Tag: http请求+火狐代理安装 [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -81,110 +81,22 @@
     </div>
     <div id="content-right" class="col-md-8">
     
-<article id="post">
-	<div class="post-title">
-  <h1>OSI模型-数据转发过程</h1>
-  	</div>
-  <div class="page-meta">
-  	<span class="fa-wrap">
-  		<i class="fa fa-clock-o"></i>
-  		<span class="date-meta">2023-07-28</span>
-  	</span>
-  	<span class="fa-wrap">
-  		
-  		<i class="fa fa-tags"></i>
-  		<span class="tags-meta">数据通信网络基础</span>
-  		
-  	</span>
-  	<span class="fa-wrap">
-  		
-  	</span>
-  </div>
-  <div class="post-content">
-  <p>b&#x3D;bit(比特) 二进制 计算机中最小的单位</p>
-<p>B&#x3D;Byte（字节） 计算机中最常用的单位（文件大小）</p>
-<p>字母、数字占1个字节 汉字占两个字节</p>
-<p>1B&#x3D;8bit</p>
-<p>100Mbps&#x3D;12.5MBps</p>
-<p>802.11ac 5G（WiFi5）</p>
-<p>802.11ax 2.4G&#x2F;5G（WiFi6）</p>
-<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728164852131.png" alt="image-20230728164852131"></p>
-<p><strong>OSI模型</strong></p>
-<p>应用层</p>
-<p>表示层  （应用层）</p>
-<p>会话层</p>
-<p>传输层</p>
-<p>网络层   （数据流层）</p>
-<p>数据链路层</p>
-<p>物理层</p>
-<p>PDU协议数据单元</p>
-<p>简单说：数据在每个层的叫法</p>
-<p>上层：message（信息&lt;数据&gt;）</p>
-<p>传输层：segment（数据段）</p>
-<p>网络层：packet(数据包)</p>
-<p>数据链路层：frame（数据帧）</p>
-<p>物理层：bit（比特&lt;位&gt;）</p>
-<p>数据—&gt;数据段—&gt;数据包—&gt;数据帧—&gt;比特</p>
-<p>568B <strong>橙白 橙 绿白 蓝 蓝白 绿 棕白 棕</strong></p>
-<p><strong>HTTP 80</strong></p>
-<p><strong>超文本传输协议</strong></p>
-<p><strong>Telnet 23</strong></p>
-<p><strong>远程管理协议</strong></p>
-<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728165021656.png" alt="image-20230728165021656"></p>
-<h1 id="TCP的建立-三次握手"><a href="#TCP的建立-三次握手" class="headerlink" title="TCP的建立 三次握手"></a><strong>TCP的建立 三次握手</strong></h1><p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728165059681.png" alt="image-20230728165059681"></p>
-<h1 id="TCP的关闭-四次握手"><a href="#TCP的关闭-四次握手" class="headerlink" title="TCP的关闭-四次握手"></a><strong>TCP的关闭-四次握手</strong></h1><p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728165128043.png" alt="image-20230728165128043"></p>
-<h1 id="route-print-路由表查询"><a href="#route-print-路由表查询" class="headerlink" title="route print 路由表查询"></a><strong>route print</strong> <strong>路由表查询</strong></h1><p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/image-20230728165205240.png" alt="image-20230728165205240"></p>
-<p>问题：主机A通过浏览器访问服务器A的Web服务器，涉及的协议有：</p>
-<p><a target="_blank" rel="noopener" href="http://www.hnist.cn/">www.hnist.cn</a></p>
-<p>HTTP(80)、DNS（53）、ARP、TCP、IP、UDP</p>
-<p><strong>DNS</strong>：将域名<a target="_blank" rel="noopener" href="http://hnist.cn/">www.hnist.cn</a> 解析出对应的IP地址：61.187.92.229</p>
-<p><strong>第一部分：DNS封装</strong></p>
-<ol>
-<li><p>应用层：DNS</p>
-</li>
-<li><p>传输层：TCP&#x2F;UDP UDP&#x3D;53</p>
-</li>
-<li><p>网络层：源目的IP地址</p>
-</li>
-</ol>
-<p>源IP地址：主机A的IP地址192.168.0.116</p>
-<p>目的IP地址：服务器地址61.187.92.229</p>
-<ol start="4">
-<li>数据链路层：源目的MAC地址</li>
-</ol>
-<p>源MAC地址：主机A的MAC地址 90-0F-0C-E7-C1-2B</p>
-<p>目的MAC地址：网关的MAC地址？通过ARP获取网关的MAC地址</p>
-<p> 注：</p>
-<ol>
-<li><p>如果主机A和WEB服务器是同网段，那么MAC地址是WEB服务器的MAC地址；如果主机A和WEB服务器不是同一网段，那么MAC是主机A的网关的MAC地址。</p>
-</li>
-<li><p>如何获得MAC地址？ ARP</p>
-</li>
-</ol>
-<p><strong>5. Ethernet II</strong></p>
-<p><strong>第二部分：HTTP封装</strong></p>
-<ol>
-<li><p>应用层：HTTP</p>
-</li>
-<li><p>传输层：TCP&#x2F;UDP TCP&#x3D;80</p>
-</li>
-<li><p>网络层：源目IP地址</p>
-</li>
-</ol>
-<p>源IP地址：主机A的IP地址 192.168.0.116</p>
-<p>目的IP地址：服务器地址61.187.92.229</p>
-<ol start="4">
-<li>数据链路层：</li>
-</ol>
-<p>源MAC地址：主机A的MAC地址90-0F-0C-E7-C1-2B</p>
-<p>目的MAC地址：网关的MAC地址？通过ARP获取网关的MAC地址</p>
-<ol start="5">
-<li>Ethernet II</li>
-</ol>
-
-	</div>
-</article>
-
+<div id="tag">
+  <h2>标签：http请求+火狐代理安装</h2>
+  
+           
+        <a href="/2023/08/04/http%E8%AF%B7%E6%B1%82+%E7%81%AB%E7%8B%90%E4%BB%A3%E7%90%86%E5%AE%89%E8%A3%85/" taget="_blank" class="tag-item">
+        <span>
+          http请求+火狐代理安装
+        </span>
+        <time datetime="2023-08-04T11:39:07.399Z">
+          2023-08-04
+        </time>
+        </a>
+      
+  
+  
+</div>
 
 
     </div>
