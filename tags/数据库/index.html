@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>IP静态路由配置步骤 [ Hexo ]</title>
+  <title>Tag: 数据库 [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -81,38 +81,22 @@
     </div>
     <div id="content-right" class="col-md-8">
     
-<article id="post">
-	<div class="post-title">
-  <h1>IP静态路由配置步骤</h1>
-  	</div>
-  <div class="page-meta">
-  	<span class="fa-wrap">
-  		<i class="fa fa-clock-o"></i>
-  		<span class="date-meta">2023-07-29</span>
-  	</span>
-  	<span class="fa-wrap">
-  		
-  		<i class="fa fa-tags"></i>
-  		<span class="tags-meta">静态路由</span>
-  		
-  	</span>
-  	<span class="fa-wrap">
-  		
-  	</span>
-  </div>
-  <div class="post-content">
-  <h1 id="静态路由实验步骤"><a href="#静态路由实验步骤" class="headerlink" title="静态路由实验步骤"></a>静态路由实验步骤</h1><p>需求：<br>根据拓扑，配置好IP地址，确保各直连能相互ping通<br>使用静态路由，确保PC1能ping通PC2和PC3<br>使用静态路由，确保PC2能ping通PC3</p>
-<p>数据包的过程：<br>发包：<br>源IP：192.168.10.1<br>目的IP：192.168.30.1<br>回包：<br>源IP：192.168.30.1<br>目的IP：192.168.10.1</p>
-<p>配置步骤：<br>1、PC1（192.168.10.1） ping PC3（192.168.30.1）<br>PC1去往PC3的路由配置<br>AR1<br>#ip route-static 192.168.30.0 24 10.1.12.2<br>AR2<br>#ip route-static 192.168.30.0 24 10.1.23.3<br>AR3<br>#ip route-static 192.168.30.0 24 10.1.34.4<br>PC3回包给PC1的路由配置<br>AR3<br>#ip route-static 192.168.10.0 24 10.1.34.3<br>AR2<br>#ip route-static 192.168.10.0 24 10.1.23.2<br>AR1<br>#ip route-static 192.168.10.0 24 10.1.12.1</p>
-<p>2、PC1（192.168.10.1） ping PC2（192.168.20.1）<br>PC1去往PC2的路由配置<br>AR1<br>#ip route-static 192.168.20.0 24 10.1.12.2<br>AR2<br>#ip route-static 192.168.20.0 24 10.1.23.3</p>
-<p>PC2回包PC1的路由配置<br>AR3<br>#ip route-static 192.168.10.0 24 10.1.23.2<br>AR2<br>#ip route-static 192.168.10.0 24 10.1.12.1</p>
-<p>3、PC2（192.168.20.1） ping PC3（192.168.30.1）<br>PC2去往PC3的路由配置<br>AR3<br>#ip route-static 192.168.30.0 24 10.1.34.4</p>
-<p>PC3回包PC2的路由配置<br>AR4<br>#ip route-static 192.168.20.0 24 10.1.34.3</p>
-<p>ping -a 192.168.10.254 192.168.30.1   &#x2F;&#x2F;带源ping</p>
-
-	</div>
-</article>
-
+<div id="tag">
+  <h2>标签：数据库</h2>
+  
+           
+        <a href="/2023/08/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" taget="_blank" class="tag-item">
+        <span>
+          数据库的基本语法
+        </span>
+        <time datetime="2023-08-11T01:13:22.024Z">
+          2023-08-11
+        </time>
+        </a>
+      
+  
+  
+</div>
 
 
     </div>
