@@ -120,11 +120,10 @@
 <h2 id="四、安全组的概念"><a href="#四、安全组的概念" class="headerlink" title="四、安全组的概念"></a>四、安全组的概念</h2><p><strong>1.安全组是一个逻辑上的分组，为同一个VPC内具有相同安全保护需求并相互信任的弹性云服务器提供访问策略。</strong></p>
 <p><strong>2.安全组是一种虚拟防火墙，用于控制安全组内ESC实例的入流量和出流量，从而提高ESC实例的安全性。</strong></p>
 <p><strong>3.安全组具备状态检测和数据包过滤能力，类似于虚拟的防火墙，一般不开安全组，不开端口就访问不了。</strong></p>
-<p><strong>网络ACL与安全组的区别</strong></p>
-<p><strong>1.</strong>  <strong>安全组在实例级别运行，网络ACL在子网级别运行</strong></p>
+<h2 id="五、网络ACL与安全组的区别"><a href="#五、网络ACL与安全组的区别" class="headerlink" title="五、网络ACL与安全组的区别"></a><strong>五、网络ACL与安全组的区别</strong></h2><p><strong>1.</strong>  <strong>安全组在实例级别运行，网络ACL在子网级别运行</strong></p>
 <p><strong>2.</strong>  <strong>ACL不仅支持允许规则还支持拒绝规则，但是安全组仅支持允许规则</strong></p>
 <p><strong>3.</strong>  <strong>安全组返回数据流会被自动允许，不受任何规则的影响；网络ACL返回数据流必须被规则明确允许</strong></p>
-<h2 id="五、最后总结："><a href="#五、最后总结：" class="headerlink" title="五、最后总结："></a>五、最后总结：</h2><p><strong>1.</strong>  <strong>二者最主要的差别是安全组作用于实例（实际硬件），因此每个实例都可以配置不同的安全组。而网络 ACL 作用于子网，相当于是给子网装了一个防火墙（网络软件），子网内的所有资源都会被网络 ACL 保护。</strong></p>
+<h2 id="六、最后总结："><a href="#六、最后总结：" class="headerlink" title="六、最后总结："></a>六、最后总结：</h2><p><strong>1.</strong>  <strong>二者最主要的差别是安全组作用于实例（实际硬件），因此每个实例都可以配置不同的安全组。而网络 ACL 作用于子网，相当于是给子网装了一个防火墙（网络软件），子网内的所有资源都会被网络 ACL 保护。</strong></p>
 <p><strong>2.</strong>  <strong>安全组作用于实例，因此安全组适合针对不同实例的精细化配置；网络 ACL 作用于子网，适合针对子网内所有实例的通用配置。</strong></p>
 <p><strong>3.由于安全组和网络 ACL 都能提供流量控制功能，理论上只用二者之一就可以保护 VPC 的安全。但是最佳实践还是二者结合使用，为 VPC 提供更全面的防护。</strong></p>
 <p><strong>4.同时使用安全组和网络 ACL 相当于加了双重保险，如果你不小心误设了其中之一，另外一层保护依然能确保 VPC 的安全。（二者结合也具有可靠性）</strong></p>
