@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>IP地址分类 [ Hexo ]</title>
+  <title>PHP控制语句 [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -83,17 +83,17 @@
     
 <article id="post">
 	<div class="post-title">
-  <h1>IP地址分类</h1>
+  <h1>PHP控制语句</h1>
   	</div>
   <div class="page-meta">
   	<span class="fa-wrap">
   		<i class="fa fa-clock-o"></i>
-  		<span class="date-meta">2023-07-28</span>
+  		<span class="date-meta">2023-08-20</span>
   	</span>
   	<span class="fa-wrap">
   		
   		<i class="fa fa-tags"></i>
-  		<span class="tags-meta">数据通信网络基础</span>
+  		<span class="tags-meta">PHP</span>
   		
   	</span>
   	<span class="fa-wrap">
@@ -101,20 +101,69 @@
   	</span>
   </div>
   <div class="post-content">
-  <p>128 64 32 16 8 4 2 1<br>练习1：将以下数字换成二进制<br>173  10101101<br>199  11000111<br>213  11010101<br>211  11010011<br>240  11110000<br>224  11100000<br>练习2：将以下数字换成十进制<br>1110 0011  227<br>1010 0011  163<br>1100 1100  204<br>1111 0001  241<br>1010 0101  165<br>1101 0110  214</p>
-<p>192.168.255.4</p>
-<p>网络号（前三位192.168.255） 主机号（.4）</p>
-<p>在internet诞生初期，IP地址是非常充裕的，计算机科学家们进行了分类地址，把IP地址分为了5大类，分别是A类、B类、C类、D类、E类</p>
-<p>A类：0-127 &#x2F;8 缺省的子网掩码：255.0.0.0<br>私网地址：10.0.0.0–10.255.255.255</p>
-<p>B类：128-191 &#x2F;16 缺省的子网掩码：255.255.0.0<br>私网地址：172.16.0.0–172.31.255.255</p>
-<p>C类：192-223 &#x2F;24 缺省的子网掩码：255.255.255.0<br>私网地址：192.168.0.0–192.168.255.255</p>
-<p>D类：224-239 组播地址<br>E类：240-255 用于科研</p>
-<p><strong>练习1</strong>：属于哪一类地址，子网掩码，网络号和主机号，是多少？</p>
-<p>1、10.2.1.1 A类，&#x2F;8，网络号：10.0.0.0 主机号：0.2.1.1</p>
-<p>2、128.63.2.100 B类，&#x2F;16，网络号：128.63.0.0 主机号：0.0.2.100</p>
-<p>3、201.222.5.64 C类，&#x2F;24，网络号：201.222.5.0 主机号：0.0.0.64</p>
-<p>4、192.6.141.2 C类，&#x2F;24，网络号：192.6.141.0 主机号：0.0.0.2</p>
-<p>5、130.113.64.16 B类，&#x2F;16，网络号：130.113.0.0 主机号：0.0.64.16</p>
+  <p>控制流程：顺序结构，循环结构，分支结构</p>
+<p>​                               </p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202315637.png" alt="image-20230820231500724"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202315038.png" alt="image-20230820231509028"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202315160.png" alt="image-20230820231515385"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202315828.png" alt="image-20230820231521706"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202316746.png" alt="image-20230820231621909"></p>
+<p>header(“Content-Type:text&#x2F;html;charset&#x3D;utf-8”);</p>
+<p>$num &#x3D; rand(1,10);</p>
+<p>if ($num % 2 &#x3D;&#x3D; 0){</p>
+<p>   echo “$num”.’<br>‘;</p>
+<p>   echo ‘$num 为偶数’;</p>
+<p>}elseif($num % 2 !&#x3D;&#x3D; 0){</p>
+<p>   echo “$num”.’<br>‘;</p>
+<p>   echo ‘$num 为奇数’;</p>
+<p>}</p>
+<p>else{</p>
+<p>   echo ‘数据错误’;</p>
+<p>}</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202316090.png" alt="image-20230820231635355"> </p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202316583.png" alt="image-20230820231640889"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202316618.png" alt="image-20230820231646762"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202316047.png" alt="image-20230820231653884"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317320.png" alt="image-20230820231659275"></p>
+<p>for($i&#x3D;1;$i&lt;&#x3D;100;$i++)</p>
+<p>{</p>
+<p>   echo $i,”,”;</p>
+<p>   if($i%5&#x3D;&#x3D;0)</p>
+<p>​     echo “</br>“;</p>
+<p>}</p>
+<p>?&gt;</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317602.png" alt="image-20230820231711855"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317067.png" alt="image-20230820231719298"></p>
+<p>for($i&#x3D;1; ;$i++){</p>
+<p>   echo “$i”.’<br>‘;</p>
+<p>}</p>
+<p>for($i&#x3D;1;$i&lt;&#x3D;10;)</p>
+<p>{</p>
+<p>   echo “$i”; </p>
+<p>}</p>
+<p>&amp;nbsp；&#x2F;&#x2F;空格</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317823.png" alt="image-20230820231728085"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317875.png" alt="image-20230820231732896"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317711.png" alt="image-20230820231738724"></p>
+<p>100以内求素数</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317435.png" alt="image-20230820231744577"></p>
+<p><strong>function</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202317663.png" alt="image-20230820231751755"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202318001.png" alt="image-20230820231802162"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202318346.png" alt="image-20230820231817620"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202318490.png" alt="image-20230820231822775"></p>
+<p>数组</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202318644.png" alt="image-20230820231829747"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202318302.png" alt="image-20230820231835602"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202318976.png" alt="image-20230820231844168"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202318117.png" alt="image-20230820231850402"></p>
+<p>&#x3D;&gt; 是数组成员访问符号</p>
+<p>-&gt; 是对象成员访问符号</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202319903.png" alt="image-20230820231901102"></p>
+<h1 id="连接Mysql"><a href="#连接Mysql" class="headerlink" title="连接Mysql"></a>连接Mysql</h1><p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202319427.png" alt="image-20230820231909331"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202319490.png" alt="image-20230820231916791"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202319204.png" alt="image-20230820231923910"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202319840.png" alt="image-20230820231929805"></p>
 
 	</div>
 </article>
