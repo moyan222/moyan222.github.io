@@ -1,0 +1,217 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>创建数据库及其语法 [ Hexo ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		Hexo
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/moyan222/moyan222.github.io"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/ACL/" rel="tag">ACL<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/ARP%E6%8A%93%E5%8C%85/" rel="tag">ARP抓包<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/HTML/" rel="tag">HTML<span class="tag-span-count">6</span></a> <a class="tag-span-link" href="/tags/JS/" rel="tag">JS<span class="tag-span-count">5</span></a> <a class="tag-span-link" href="/tags/PHP/" rel="tag">PHP<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="tag">SQL注入<span class="tag-span-count">8</span></a> <a class="tag-span-link" href="/tags/STP/" rel="tag">STP<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/VLAN/" rel="tag">VLAN<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/http%E8%AF%B7%E6%B1%82-%E7%81%AB%E7%8B%90%E4%BB%A3%E7%90%86%E5%AE%89%E8%A3%85/" rel="tag">http请求+火狐代理安装<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/markdown%E8%AF%AD%E6%B3%95/" rel="tag">markdown语法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="tag">信息收集<span class="tag-span-count">8</span></a> <a class="tag-span-link" href="/tags/%E5%85%B3%E4%BA%8E%E4%B8%BB%E9%A2%98/" rel="tag">关于主题<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E5%88%86%E4%BA%AB%E7%AC%94%E8%AE%B0/" rel="tag">分享笔记<span class="tag-span-count">4</span></a> <a class="tag-span-link" href="/tags/%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" rel="tag">博客的搭建<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%90%AD%E5%BB%BA/" rel="tag">图床的搭建<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库<span class="tag-span-count">3</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag">数据通信网络基础<span class="tag-span-count">6</span></a> <a class="tag-span-link" href="/tags/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/" rel="tag">永恒之蓝<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/%E6%BC%8F%E6%B4%9E/" rel="tag">漏洞<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E7%AB%AF%E5%8F%A3/" rel="tag">端口<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E9%93%BE%E8%B7%AF%E8%81%9A%E5%90%88/" rel="tag">链路聚合<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/" rel="tag">静态路由<span class="tag-span-count">1</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">60</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>创建数据库及其语法</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2023-08-20</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">数据库</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202255327.png" alt="image-20230820225547427"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202255289.png" alt="image-20230820225554479"></p>
+<p>  <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202256831.png" alt="image-20230820225603810">                             </p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202257586.png" alt="image-20230820225720192"></p>
+<p>NoSQL（Not Only SQL），意思是“不仅仅是SQL”，是非关系型数据库的总称。</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202257596.png" alt="image-20230820225741616"></p>
+<p>MySQL默认端口：<strong>3306</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202257918.png" alt="image-20230820225749055"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202257334.png" alt="image-20230820225753686"></p>
+<p>SQL Server 默认端口：<strong>1433</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202258524.png" alt="image-20230820225807462"></p>
+<p>Oracle 默认端口：1521</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202258744.png" alt="image-20230820225813868"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202258979.png" alt="image-20230820225821085"></p>
+<p>MySQL的连接：密码root</p>
+<p>  <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202258924.png" alt="image-20230820225827866"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202258742.png" alt="image-20230820225832975"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202258925.png" alt="image-20230820225838256"></p>
+<p>**创建一个数据库 create database hkh;(**<strong>注意英文分号)</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202258984.png" alt="image-20230820225852962"></p>
+<p><strong>删除一个数据库 drop database hkh;</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202259291.png" alt="image-20230820225906398"></p>
+<p><strong>show columns from</strong> **数据表| desc table_name;</p>
+<p>*<em>显示数据表的属性，属性类型，主键信息，是否为NULL</em>***，默认值等其他信息。</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202259789.png" alt="image-20230820225913554"></p>
+<p><strong>show index from table_name:</strong> **显示数据表的详细索引信息，包括primary key(**主键)</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202259284.png" alt="image-20230820225943344"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202259029.png" alt="image-20230820225950038"></p>
+<p><strong>创建数据表</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202300869.png" alt="image-20230820225954661"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202300587.png" alt="image-20230820230046421"></p>
+<p>插入语句 <strong>insert into table_name</strong></p>
+<p>**(****列表头名1,****列表头名2,…**<strong>列表头名N)</strong></p>
+<p><strong>values</strong></p>
+<p>**(”<strong><strong>一班”,”</strong></strong>李四”); &#x2F;&#x2F;**<strong>与上面表头名一一对应</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301815.png" alt="image-20230820230106820"></p>
+<p><strong>查询语句 select column_name,column_anme from table_school;</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301101.png" alt="image-20230820230117145"></p>
+<p><strong>updata****更新</strong> updata table_name set calss(列表头名)&#x3D;’二班’ where student_id&#x3D;2 &#x2F;&#x2F;指定第二行内容</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301682.png" alt="image-20230820230125949"></p>
+<p>**“|**<strong>”表示或者</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301080.png" alt="image-20230820230134391"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301107.png" alt="image-20230820230141115"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301619.png" alt="image-20230820230146653"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301851.png" alt="image-20230820230152914"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202301247.png" alt="image-20230820230157412"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202302471.png" alt="image-20230820230204799"></p>
+<p><strong>修改数据类型</strong></p>
+<p><strong>ALTER TABLE &lt;****表名&gt; MODIFY &lt;****字段名&gt; &lt;****数据类型&gt;;</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202302047.png" alt="image-20230820230214196"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202302814.png" alt="image-20230820230237037"></p>
+<p><strong>ASC****升序（正常从小到大排序） DESC</strong> <strong>降序</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202302543.png" alt="image-20230820230244606"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202302341.png" alt="image-20230820230248497"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202302631.png" alt="image-20230820230252650"></p>
+<p>数据库基础—group by 子句 </p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202303947.png" alt="image-20230820230300915"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202303441.png" alt="image-20230820230307605"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202303226.png" alt="image-20230820230311232"> </p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202303706.png" alt="image-20230820230316701"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202303504.png" alt="image-20230820230322421"></p>
+<p>SELECT 查询</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202303602.png" alt="image-20230820230351746"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202308202303115.png" alt="image-20230820230356245"></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/phpMyAdmin4.8.5/index.php">http://localhost/phpMyAdmin4.8.5/index.php</a></p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2023 John Doe<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>
